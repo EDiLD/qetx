@@ -1,0 +1,11 @@
+Package: qetx
+Type: Package
+Title: Companion to Quantitative Ecotoxicology
+Version: 0.0.1
+Date: 2013-10-07
+Author: Eduard Szoecs
+Maintainer: Eduard Szoecs <szoe8822@uni-landau.de>
+Description: Companion to Quantitative Ecotoxicology
+License: GPL-2
+Collate:
+    'winsor.R'
