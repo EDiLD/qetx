@@ -1,11 +1,15 @@
 Package: qetx
 Type: Package
-Title: Companion to Quantitative Ecotoxicology
+Title: Quantitative Ecotoxicology with R
 Version: 0.0.1
 Date: 2013-10-07
 Author: Eduard Szoecs
 Maintainer: Eduard Szoecs <szoe8822@uni-landau.de>
 Description: Companion to Quantitative Ecotoxicology
-License: GPL-2
+License: CC0
+BugReports: https://github.com/EDiLD/qetx/issues
+LazyLoad: yes
+LazyData: yes
 Collate:
     'winsor.R'
+    'qetx-package.R'
