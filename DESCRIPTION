@@ -5,7 +5,7 @@ Version: 0.0.1
 Date: 2013-10-07
 Author: Eduard Szoecs
 Maintainer: Eduard Szoecs <szoe8822@uni-landau.de>
-Description: Companion to Quantitative Ecotoxicology
+Description: Companion to Quantitative Ecotoxicology with R!
 License: CC0
 BugReports: https://github.com/EDiLD/qetx/issues
 LazyLoad: yes
