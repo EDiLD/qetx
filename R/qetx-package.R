@@ -7,7 +7,7 @@
 NULL
 #' Sulfate concentrations (mg/L) measured during a routine water quality survey 
 #' of the Savannah River (South Carolina). 
-#' @return A data.frame with one variable 'conc'.
+#' @return A vector of measurements.
 #' @name so4
 #' @docType data
 #' @keywords data
