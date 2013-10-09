@@ -8,6 +8,8 @@ Maintainer: Eduard Szoecs <szoe8822@uni-landau.de>
 Description: Companion to Quantitative Ecotoxicology with R!
 License: CC0
 BugReports: https://github.com/EDiLD/qetx/issues
+LazyLoad: yes
+LazyData: yes
 Collate:
     'winsor.R'
     'qetx-package.R'
