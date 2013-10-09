@@ -4,7 +4,7 @@
 \title{Sulfate concentrations (mg/L) measured during a routine water quality survey
 of the Savannah River (South Carolina).}
 \value{
-  A vector of measurements.
+  A data.frame with the variable \emph{conc}.
 }
 \description{
   Sulfate concentrations (mg/L) measured during a routine
