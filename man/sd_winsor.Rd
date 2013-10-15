@@ -6,7 +6,7 @@
 }
 \arguments{
   \item{x}{numeric; A vector as returned by
-  \code{\link{winsor()}}.}
+  \code{\link{winsor}}.}
 }
 \value{
   Winsorized Standard Deviation.

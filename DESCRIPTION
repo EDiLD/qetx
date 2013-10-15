@@ -10,6 +10,8 @@ License: CC0
 BugReports: https://github.com/EDiLD/qetx/issues
 LazyLoad: yes
 LazyData: yes
+Depends:
+    vegan
 Collate:
     'winsor.R'
     'qetx-package.R'

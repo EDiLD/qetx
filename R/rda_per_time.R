@@ -9,8 +9,10 @@
 #' @param response Multivariate response data.
 #' @param treatment A variable for treatments.
 #' @param time A factor defining the observation times
+#' @param ... other arguments passed to \code{\link{anova.cca}}
+#' @param x an rdas-object.
 #' 
-#' @return A list of lenght of time-points. Each list entry holds the resulting
+#' @return A list of class rdas. One list entry for every time point. Each list entry holds the resulting
 #' rda-model ($rda) or the result of a permutation test ($anova).
 #' 
 #' @export
@@ -20,7 +22,7 @@
 #' 
 #' @examples
 #' # Chlorpyrifos experiment and experimental design
-#' data(pyrifos)
+#' data(pyrifos, package = 'vegan')
 #' week <- gl(11, 12, labels=c(-4, -1, 0.1, 1, 2, 4, 8, 12, 15, 19, 24))
 #' dose <- factor(rep(c(0.1, 0, 0, 0.9, 0, 44, 6, 0.1, 44, 0.9, 0, 6), 11))
 #' # PRC
@@ -31,17 +33,29 @@
 #' sapply(mod_pw, function(x) x$anova[1, 5])
 
 
-rda_per_time <-function(response, treatment, time){
+rda_per_time <-function(response, treatment, time, ...){
   # have to pass constraints to .GlobalEnv (scoping issue in anova.cca) 
   df <- data.frame(treatment = treatment, time = time, stringsAsFactors=FALSE)
   assign('df', df, envir = .GlobalEnv)
   
   out <- NULL
   for (i in levels(time)) {
-    out[[i]]$mod <- rda(response[time == i, ] ~ treatment[time==i], data=df)
-    out[[i]]$anova <- anova(out[[i]]$mod , by = 'terms')
+    out[[i]]$rda <- rda(response[time == i, ] ~ treatment[time==i], data=df)
+    out[[i]]$anova <- anova(out[[i]]$rda , by = 'terms', ...)
   }
   # remove constraints from .GlobalEnv
   rm('df', envir = .GlobalEnv)
+  class(out) <- 'rdas'
   return(out)
+}
+
+#' @method print rdas
+#' @export
+#' @rdname rda_per_time
+print.rdas <- function(x, ...){
+  cat("\n")
+  writeLines(strwrap("RDA per time levels\n",
+                     prefix = "\t"))
+  cat(paste("\nNo. of time levels:", length(x)))
+  cat(paste("\nNo. of permutations:", x[[1]]$anova$N.Perm[1]))
 }

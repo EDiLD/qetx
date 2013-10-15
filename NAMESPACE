@@ -1,3 +1,4 @@
+S3method(print,rdas)
 export(rda_per_time)
 export(sd_winsor)
 export(winsor)

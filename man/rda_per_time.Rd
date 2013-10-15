@@ -1,8 +1,11 @@
 \name{rda_per_time}
+\alias{print.rdas}
 \alias{rda_per_time}
 \title{Redundancy Analysis (RDA) per factor level}
 \usage{
-  rda_per_time(response, treatment, time)
+  rda_per_time(response, treatment, time, ...)
+
+  \method{print}{rdas} (x, ...)
 }
 \arguments{
   \item{response}{Multivariate response data.}
@@ -10,11 +13,16 @@
   \item{treatment}{A variable for treatments.}
 
   \item{time}{A factor defining the observation times}
+
+  \item{...}{other arguments passed to
+  \code{\link{anova.cca}}}
+
+  \item{x}{an rdas-object.}
 }
 \value{
-  A list of lenght of time-points. Each list entry holds
-  the resulting rda-model ($rda) or the result of a
-  permutation test ($anova).
+  A list of class rdas. One list entry for every time
+  point. Each list entry holds the resulting rda-model
+  ($rda) or the result of a permutation test ($anova).
 }
 \description{
   This function runs a RDA on each timepoint. Signuificance
@@ -24,7 +32,7 @@
 }
 \examples{
 # Chlorpyrifos experiment and experimental design
-data(pyrifos)
+data(pyrifos, package = 'vegan')
 week <- gl(11, 12, labels=c(-4, -1, 0.1, 1, 2, 4, 8, 12, 15, 19, 24))
 dose <- factor(rep(c(0.1, 0, 0, 0.9, 0, 44, 6, 0.1, 44, 0.9, 0, 6), 11))
 # PRC

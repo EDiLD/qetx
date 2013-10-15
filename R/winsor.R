@@ -46,7 +46,7 @@ winsor <- function (x, lod = NULL, width = NULL)
 #' Winsorized Standard Deviation
 #' 
 #' 
-#' @param x numeric; A vector as returned by \code{\link{winsor()}}.
+#' @param x numeric; A vector as returned by \code{\link{winsor}}.
 #' @return Winsorized Standard Deviation.
 #' @author Eduard Szoecs \email{szoe8822@@uni-landau.de}
 #' @seealso \code{\link{winsor}}
