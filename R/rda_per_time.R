@@ -13,6 +13,7 @@
 #' @return A list of lenght of time-points. Each list entry holds the resulting
 #' rda-model ($rda) or the result of a permutation test ($anova).
 #' 
+#' @export
 #' @author Eduard Szoecs \email{szoe8822@@uni-landau.de}
 #' 
 #' @seealso \code{\link{prc}} \code{\link{anova.cca}} \code{\link{rda}}
