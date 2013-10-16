@@ -17,7 +17,7 @@ NULL
 #' Site locations are designated as kilometers upstream (-) or downstream (+) of the outfall.
 #' @usage data(abu)
 #' @format A data.frame with 8 observations of abundance of 10 Species.
-#' @name abbu
+#' @name abu
 #' @docType data
 #' @keywords data
 NULL
