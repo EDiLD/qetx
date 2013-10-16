@@ -1,6 +1,6 @@
 \docType{data}
-\name{abbu}
-\alias{abbu}
+\name{abu}
+\alias{abu}
 \title{Species sampled at eight sites around an outfall.
 Site locations are designated as kilometers upstream (-) or downstream (+) of the outfall.}
 \format{A data.frame with 8 observations of abundance of 10 Species.}
