@@ -6,7 +6,7 @@
 \describe{
 \item{"dead"}{Number of fish died}
 \item{"total"}{Total number of fish exposed.}
-\item{"conc"}{NaCl Concentration.}
+\item{"conc"}{NaCl concentration.}
 }}
 \description{
   Newman and Aplin (1992) exposed mosquitofish

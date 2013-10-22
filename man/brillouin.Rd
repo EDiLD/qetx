@@ -18,6 +18,9 @@
 \details{
   Brillouin's index is defined as \eqn{ H = \frac{1}{N} Ln
   (\frac{N!}{\prod_{n=1}^S n_i!}) }
+
+  where N = Total number of idividuals in the sample and
+  n_i number of species i in the sample.
 }
 \examples{
 data(abu)

@@ -28,10 +28,23 @@ NULL
 #' \describe{
 #' \item{"dead"}{Number of fish died}
 #' \item{"total"}{Total number of fish exposed.}
-#' \item{"conc"}{NaCl Concentration.}
+#' \item{"conc"}{NaCl concentration.}
 #' }
 #' @references Newman, M.C. and M. Aplin.  1992.  Enhancing toxicity data interpretation and prediction of ecological risk with survival time modeling: An illustration using sodium chloride toxicity to mosquitofish (\emph{Gambusia holbrooki}).  Aquatic Toxicol. 23:85-96.  
 #' @name salt
+#' @docType data
+#' @keywords data
+NULL
+#' Fathead minnow (\emph{Pimephales promelas}) larval survival data for sodium pentachlorophenol (NaPCP) exposure
+#' @usage data(napcp)
+#' @format A data.frame with 2 columns:
+#' \describe{
+#' \item{"arc"}{numeric; Proportion of fish alive at the end of experiment. Proportions have been arcsine square root transformed.}
+#' \item{"conc"}{factor; NaPCP concentration.}
+#' }
+#' @note Proportions have been 1.5708 - arcsin(sqrt(1/(4*x))) transformed.
+#' @references Weber et al. 1989. Short-term methods for estimating the chronic toxicity of effluents and receiving waters to freshwater organisms. EPA.
+#' @name napcp
 #' @docType data
 #' @keywords data
 NULL
