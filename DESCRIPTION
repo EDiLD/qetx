@@ -16,3 +16,4 @@ Collate:
     'winsor.R'
     'qetx-package.R'
     'rda_per_time.R'
+    'brillouin.R'
