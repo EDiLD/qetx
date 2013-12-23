@@ -5,6 +5,7 @@
 #' @author Eduard Szoecs \email{szoe8822@@uni-landau.de}
 #' @keywords package
 NULL
+
 #' Sulfate concentrations (mg/L) measured during a routine water quality survey 
 #' of the Savannah River (South Carolina). 
 #' @usage data(so4)
@@ -13,6 +14,7 @@ NULL
 #' @docType data
 #' @keywords data
 NULL
+
 #' Species sampled at eight sites around an outfall. 
 #' Site locations are designated as kilometers upstream (-) or downstream (+) of the outfall.
 #' @usage data(abu)
@@ -21,6 +23,7 @@ NULL
 #' @docType data
 #' @keywords data
 NULL
+
 #' Dead of mosquitofish at different NaCl concentrations
 #' @description Newman and Aplin (1992) exposed mosquitofish (\emph{Gambusia holbrooki}) to a series of NaCl concentrations for 96h.
 #' @usage data(salt)
@@ -35,6 +38,7 @@ NULL
 #' @docType data
 #' @keywords data
 NULL
+
 #' Fathead minnow (\emph{Pimephales promelas}) larval survival data for sodium pentachlorophenol (NaPCP) exposure
 #' @usage data(napcp)
 #' @format A data.frame with 2 columns:
@@ -48,7 +52,8 @@ NULL
 #' @docType data
 #' @keywords data
 NULL
-#' Benthic community data around a offshore installation
+
+#' Benthic community data around an offshore installation
 #' @description Samples were collected at sampling stations with varying distanced from installation along the transects.
 #' For environmental (and distance) data see \code{\link{oil_env}}.
 #' @usage data(oil)
@@ -60,7 +65,7 @@ NULL
 #' @rdname oil
 #' @seealso \code{\link{oil_env}}
 NULL
-#' Corresponding environmental data to oil data set
+
 #' @usage data(oil_env)
 #' @format A dataframe of 20 observations of 22 variables:
 #' \describe{
@@ -88,8 +93,9 @@ NULL
 #' \item{hg}{mercury}
 #' }
 #' @source Data was retrieved from the UK Benthos Database,Oil & Gas UK , http://www.oilandgasuk.co.uk/knowledgecentre/uk_benthos_database.cfm
-#' @name oil_env
 #' @docType data
 #' @keywords data
+#' @name oil_env
+#' @rdname oil
 #' @seealso \code{\link{oil}}
 NULL

@@ -3,9 +3,9 @@
 \alias{rda_per_time}
 \title{Redundancy Analysis (RDA) per factor level}
 \usage{
-  rda_per_time(response, treatment, time, ...)
+rda_per_time(response, treatment, time, ...)
 
-  \method{print}{rdas} (x, ...)
+\method{print}{rdas}(x, ...)
 }
 \arguments{
   \item{response}{Multivariate response data.}
@@ -20,15 +20,15 @@
   \item{x}{an rdas-object.}
 }
 \value{
-  A list of class rdas. One list entry for every time
-  point. Each list entry holds the resulting rda-model
-  ($rda) or the result of a permutation test ($anova).
+A list of class rdas. One list entry for every time point.
+Each list entry holds the resulting rda-model ($rda) or the
+result of a permutation test ($anova).
 }
 \description{
-  This function runs a RDA on each timepoint. Signuificance
-  of contraining terms is assessed via permutaions. This is
-  mainly a wrapper around \code{\link{rda}} and
-  \code{\link{anova.cca}}.
+This function runs a RDA on each timepoint. Signuificance
+of contraining terms is assessed via permutaions. This is
+mainly a wrapper around \code{\link{rda}} and
+\code{\link{anova.cca}}.
 }
 \examples{
 # Chlorpyrifos experiment and experimental design
@@ -43,10 +43,9 @@ mod_pw <- rda_per_time(pyrifos, log(10*as.numeric(as.character(dose)) + 1), week
 sapply(mod_pw, function(x) x$anova[1, 5])
 }
 \author{
-  Eduard Szoecs \email{szoe8822@uni-landau.de}
+Eduard Szoecs \email{szoe8822@uni-landau.de}
 }
 \seealso{
-  \code{\link{prc}} \code{\link{anova.cca}}
-  \code{\link{rda}}
+\code{\link{prc}} \code{\link{anova.cca}} \code{\link{rda}}
 }
 

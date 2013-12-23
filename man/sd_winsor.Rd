@@ -2,17 +2,17 @@
 \alias{sd_winsor}
 \title{Winsorized Standard Deviation}
 \usage{
-  sd_winsor(x)
+sd_winsor(x)
 }
 \arguments{
   \item{x}{numeric; A vector as returned by
   \code{\link{winsor}}.}
 }
 \value{
-  Winsorized Standard Deviation.
+Winsorized Standard Deviation.
 }
 \description{
-  Winsorized Standard Deviation
+Winsorized Standard Deviation
 }
 \examples{
 x <- c(7.7, 7.7, 7.7, 7.1, 6.9, 6.5, 6.2, 6.1, 5.7, 5.6, 5.2, 4.5,
@@ -21,9 +21,9 @@ xw <- winsor(x, lod = 2.5)
 sd_winsor(xw)
 }
 \author{
-  Eduard Szoecs \email{szoe8822@uni-landau.de}
+Eduard Szoecs \email{szoe8822@uni-landau.de}
 }
 \seealso{
-  \code{\link{winsor}}
+\code{\link{winsor}}
 }
 
