@@ -3,7 +3,7 @@
 \alias{rda_per_time}
 \title{Redundancy Analysis (RDA) per factor level}
 \usage{
-rda_per_time(response, treatment, time, ...)
+rda_per_time(response, treatment, time, nperm = NULL)
 
 \method{print}{rdas}(x, ...)
 }

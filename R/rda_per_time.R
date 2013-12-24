@@ -33,18 +33,20 @@
 #' sapply(mod_pw, function(x) x$anova[1, 5])
 
 
-rda_per_time <-function(response, treatment, time, ...){
+rda_per_time <-function(response, treatment, time, nperm = NULL){
   # have to pass constraints to .GlobalEnv (scoping issue in anova.cca) 
   df <- data.frame(treatment = treatment, time = time, stringsAsFactors=FALSE)
-  assign('df', df, envir = .GlobalEnv)
   
   out <- NULL
   for (i in levels(time)) {
-    out[[i]]$rda <- rda(response[time == i, ] ~ treatment[time==i], data=df)
-    out[[i]]$anova <- anova(out[[i]]$rda , by = 'terms', ...)
+    resp <- response[time == i, ]
+    take <- df[time == i, ]
+    
+    out[[i]]$mod <- rda(resp ~ treatment, data=take)
+    # since there is only one term left anova.cca == anova.ccabyterm
+    out[[i]]$anova <- anova(out[[i]]$mod, step = nperm)
+    
   }
-  # remove constraints from .GlobalEnv
-  rm('df', envir = .GlobalEnv)
   class(out) <- 'rdas'
   return(out)
 }
@@ -57,5 +59,5 @@ print.rdas <- function(x, ...){
   writeLines(strwrap("RDA per time levels\n",
                      prefix = "\t"))
   cat(paste("\nNo. of time levels:", length(x)))
-  cat(paste("\nNo. of permutations:", x[[1]]$anova$N.Perm[1]))
+  cat(paste("\nNo. of permutations:", attr(rdas[[1]]$anova, 'control')$nperm))
 }
