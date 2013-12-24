@@ -1,6 +1,7 @@
 \docType{data}
 \name{oil}
 \alias{oil}
+\alias{oil_env}
 \title{Benthic community data around an offshore installation}
 \format{A dataframe of observations of 50 species at 20 sites.}
 \source{
@@ -22,8 +23,6 @@ Samples were collected at sampling stations with varying
 distanced from installation along the transects. For
 environmental (and distance) data see
 \code{\link{oil_env}}.
-
-Corresponding environmental data to oil data set
 }
 \seealso{
 \code{\link{oil_env}}
